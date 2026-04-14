@@ -1,0 +1,378 @@
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&family=Inter:wght@300;400;500&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+#dp{font-family:'Inter',sans-serif;background:#0f0000;color:#fff;border-radius:12px;overflow:hidden;}
+
+/* NAV */
+#nav{background:#0f0000;border-bottom:0.5px solid #2a0000;padding:0 28px;height:60px;display:flex;align-items:center;justify-content:space-between;}
+.dp-logo{font-family:'Oswald',sans-serif;font-size:22px;font-weight:700;color:#c0392b;letter-spacing:1px;display:flex;align-items:center;gap:8px;}
+.dp-logo-dot{width:8px;height:8px;border-radius:50%;background:#c0392b;}
+.nav-links{display:flex;gap:2px;}
+.nl{padding:7px 16px;border-radius:6px;background:transparent;border:none;color:#666;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;letter-spacing:0.5px;transition:color 0.2s;}
+.nl:hover,.nl.on{color:#fff;}
+.nl.on{background:rgba(192,57,43,0.15);}
+.nav-shop{padding:8px 20px;border-radius:20px;background:#c0392b;border:none;color:#fff;font-size:12px;cursor:pointer;font-family:'Inter',sans-serif;font-weight:500;letter-spacing:0.5px;}
+.nav-shop:hover{background:#a93226;}
+
+/* SECTIONS */
+.sec{display:none;}
+.sec.on{display:block;}
+
+/* ===== HERO ===== */
+#hero{background:#0f0000;position:relative;overflow:hidden;min-height:520px;}
+#bubble-canvas{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;}
+.hero-inner{position:relative;z-index:2;padding:60px 40px 50px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;}
+.hero-left{}
+.hero-eyebrow{display:inline-block;padding:4px 14px;border-radius:20px;background:rgba(192,57,43,0.2);border:0.5px solid rgba(192,57,43,0.4);color:#e74c3c;font-size:10px;letter-spacing:3px;margin-bottom:20px;}
+.hero-h1{font-family:'Oswald',sans-serif;font-size:52px;font-weight:700;line-height:1.0;letter-spacing:-1px;margin-bottom:14px;}
+.hero-h1 .red{color:#c0392b;}
+.hero-sub{color:#888;font-size:13px;line-height:1.8;max-width:380px;margin-bottom:30px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+.btn-red{padding:13px 28px;border-radius:8px;background:#c0392b;border:none;color:#fff;font-size:13px;cursor:pointer;font-weight:500;letter-spacing:0.5px;}
+.btn-red:hover{background:#a93226;}
+.btn-outline{padding:13px 28px;border-radius:8px;background:transparent;border:0.5px solid #333;color:#aaa;font-size:13px;cursor:pointer;}
+.btn-outline:hover{border-color:#666;color:#fff;}
+.hero-right{display:flex;justify-content:center;align-items:center;}
+.can-wrap{position:relative;width:160px;height:300px;animation:float 3s ease-in-out infinite;}
+@keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-14px);}}
+.can-body{width:100%;height:100%;border-radius:18px;background:#8b0000;position:relative;overflow:hidden;border:2px solid #a00000;}
+.can-top{position:absolute;top:0;left:0;right:0;height:40px;background:#6b0000;border-radius:18px 18px 0 0;display:flex;align-items:center;justify-content:center;}
+.can-tab{width:20px;height:8px;background:#888;border-radius:4px;}
+.can-label{position:absolute;top:50px;left:0;right:0;text-align:center;padding:0 10px;}
+.can-brand{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:#fff;line-height:1;}
+.can-brand2{font-family:'Oswald',sans-serif;font-size:13px;color:#ffaaaa;letter-spacing:2px;}
+.can-num{font-family:'Oswald',sans-serif;font-size:11px;color:#cc6666;margin-top:4px;}
+.can-stripe{position:absolute;bottom:60px;left:0;right:0;height:2px;background:rgba(255,255,255,0.1);}
+.can-bot{position:absolute;bottom:0;left:0;right:0;height:35px;background:#6b0000;border-radius:0 0 18px 18px;}
+.can-shine{position:absolute;top:40px;left:15px;width:12px;bottom:35px;background:rgba(255,255,255,0.06);border-radius:6px;}
+.hero-stats{display:flex;gap:0;margin-top:40px;padding-top:32px;border-top:0.5px solid #1f0000;}
+.hstat{flex:1;padding:0 20px;border-right:0.5px solid #1f0000;}
+.hstat:first-child{padding-left:0;}
+.hstat:last-child{border-right:none;}
+.hstat-num{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#c0392b;}
+.hstat-lbl{font-size:11px;color:#444;letter-spacing:1px;margin-top:2px;}
+
+/* ===== FLAVORS ===== */
+#flavors{padding:50px 28px;background:#0a0000;}
+.sec-header{text-align:center;margin-bottom:40px;}
+.sec-tag{font-size:10px;color:#c0392b;letter-spacing:3px;margin-bottom:10px;}
+.sec-h2{font-family:'Oswald',sans-serif;font-size:36px;font-weight:700;color:#fff;}
+.sec-sub{color:#555;font-size:13px;margin-top:6px;}
+.flavors-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
+.fl-card{background:#120000;border:0.5px solid #1f0000;border-radius:14px;padding:24px 20px;cursor:pointer;transition:border-color 0.2s,transform 0.2s;text-align:center;}
+.fl-card:hover{border-color:#c0392b;transform:translateY(-3px);}
+.fl-icon{width:64px;height:64px;border-radius:50%;margin:0 auto 16px;display:flex;align-items:center;justify-content:center;}
+.fl-name{font-family:'Oswald',sans-serif;font-size:16px;font-weight:500;color:#fff;margin-bottom:6px;}
+.fl-desc{font-size:11px;color:#555;line-height:1.6;}
+.fl-badge{display:inline-block;padding:3px 10px;border-radius:10px;font-size:9px;margin-top:10px;background:rgba(192,57,43,0.15);color:#e74c3c;border:0.5px solid rgba(192,57,43,0.3);}
+
+/* ===== STORY ===== */
+#story{padding:50px 28px;background:#0f0000;}
+.story-grid{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+.story-left{}
+.story-year{font-family:'Oswald',sans-serif;font-size:80px;font-weight:700;color:#1a0000;line-height:1;margin-bottom:-10px;}
+.story-h2{font-family:'Oswald',sans-serif;font-size:32px;font-weight:700;color:#fff;margin-bottom:16px;}
+.story-p{color:#555;font-size:13px;line-height:1.9;margin-bottom:14px;}
+.story-right{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.fact-card{background:#120000;border:0.5px solid #1f0000;border-radius:12px;padding:18px;}
+.fact-num{font-family:'Oswald',sans-serif;font-size:26px;font-weight:700;color:#c0392b;margin-bottom:4px;}
+.fact-lbl{font-size:11px;color:#555;line-height:1.5;}
+
+/* ===== SHOP ===== */
+#shop{padding:50px 28px;background:#0a0000;}
+.products-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.prod-card{background:#120000;border:0.5px solid #1f0000;border-radius:14px;overflow:hidden;cursor:pointer;}
+.prod-card:hover{border-color:#333;}
+.prod-img{height:160px;display:flex;align-items:center;justify-content:center;position:relative;}
+.prod-mini-can{width:50px;height:90px;border-radius:10px;border:1.5px solid #a00000;display:flex;flex-direction:column;align-items:center;justify-content:center;}
+.prod-mini-brand{font-family:'Oswald',sans-serif;font-size:10px;color:#fff;font-weight:700;}
+.prod-info{padding:16px;}
+.prod-name{font-size:13px;font-weight:500;color:#fff;margin-bottom:4px;}
+.prod-desc{font-size:11px;color:#555;line-height:1.5;margin-bottom:12px;}
+.prod-footer{display:flex;align-items:center;justify-content:space-between;}
+.prod-price{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:#c0392b;}
+.prod-add{padding:6px 16px;border-radius:6px;background:#c0392b;border:none;color:#fff;font-size:11px;cursor:pointer;font-weight:500;}
+.prod-add:hover{background:#a93226;}
+.prod-tag{position:absolute;top:12px;right:12px;padding:3px 8px;border-radius:10px;font-size:9px;background:#c0392b;color:#fff;}
+
+/* ===== FOOTER ===== */
+#footer{background:#080000;border-top:0.5px solid #1a0000;padding:32px 28px;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:30px;margin-bottom:28px;}
+.footer-brand{font-family:'Oswald',sans-serif;font-size:18px;font-weight:700;color:#c0392b;margin-bottom:10px;}
+.footer-bio{font-size:11px;color:#444;line-height:1.7;}
+.footer-col h4{font-size:11px;color:#666;letter-spacing:2px;margin-bottom:12px;}
+.footer-col a{display:block;font-size:12px;color:#444;margin-bottom:7px;cursor:pointer;}
+.footer-col a:hover{color:#fff;}
+.footer-bot{display:flex;justify-content:space-between;align-items:center;padding-top:20px;border-top:0.5px solid #1a0000;}
+.footer-copy{font-size:11px;color:#333;}
+.footer-socials{display:flex;gap:10px;}
+.fsoc{width:30px;height:30px;border-radius:6px;background:#120000;border:0.5px solid #1f0000;display:flex;align-items:center;justify-content:center;cursor:pointer;}
+.fsoc:hover{border-color:#333;}
+.fsoc svg{width:12px;height:12px;fill:none;stroke:#555;stroke-width:1.5;stroke-linecap:round;}
+</style>
+
+<div id="dp">
+
+  <div id="nav">
+    <div class="dp-logo"><div class="dp-logo-dot"></div>Dr Pepper</div>
+    <div class="nav-links">
+      <button class="nl on" onclick="show('hero',this)">Ana Sayfa</button>
+      <button class="nl" onclick="show('flavors',this)">Tatlar</button>
+      <button class="nl" onclick="show('story',this)">Hikayemiz</button>
+      <button class="nl" onclick="show('shop',this)">Mağaza</button>
+    </div>
+    <button class="nav-shop" onclick="show('shop',null)">Hemen Al</button>
+  </div>
+
+  <div id="hero" class="sec on">
+    <canvas id="bubble-canvas"></canvas>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <div class="hero-eyebrow">1885'TEN BERİ EFSANE TAT</div>
+        <h1 class="hero-h1">Sadece Bir<br>İçecek Değil.<br><span class="red">Bir Deneyim.</span></h1>
+        <p class="hero-sub">23 eşsiz tatın mükemmel harmanı. Her yudumda yılların ustalığı, her açtığında o tanıdık his. Dr Pepper — başka hiçbir şeye benzemiyor.</p>
+        <div class="hero-btns">
+          <button class="btn-red" onclick="show('shop',document.querySelectorAll('.nl')[3])">Şimdi Satın Al</button>
+          <button class="btn-outline" onclick="show('flavors',document.querySelectorAll('.nl')[1])">Tatları Keşfet</button>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="hstat-num">139</div><div class="hstat-lbl">YIL TARİH</div></div>
+          <div class="hstat"><div class="hstat-num">23</div><div class="hstat-lbl">EŞSIZ TAT</div></div>
+          <div class="hstat"><div class="hstat-num">50+</div><div class="hstat-lbl">ÜLKEDE</div></div>
+          <div class="hstat"><div class="hstat-num">1B+</div><div class="hstat-lbl">KUTULANDIRILMIş</div></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="can-wrap">
+          <div class="can-body">
+            <div class="can-top"><div class="can-tab"></div></div>
+            <div class="can-shine"></div>
+            <div class="can-label">
+              <div class="can-brand">Dr</div>
+              <div class="can-brand">Pepper</div>
+              <div class="can-brand2">ORIGINAL</div>
+              <div class="can-num">23 FLAVORS</div>
+            </div>
+            <div class="can-stripe"></div>
+            <div class="can-bot"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="flavors" class="sec">
+    <div class="sec-header">
+      <div class="sec-tag">KOLEKSIYONUMUZ</div>
+      <div class="sec-h2">Her Damağa Bir Dr Pepper</div>
+      <div class="sec-sub">Orijinalden Sugar Free'ye — hepsinde o ikonik his</div>
+    </div>
+    <div class="flavors-grid">
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#2a0000;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#8b0000" stroke="#c0392b" stroke-width="1.5"/><path d="M14 7v7l4 4" stroke="#ff6b6b" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="fl-name">Dr Pepper Original</div>
+        <div class="fl-desc">1885'ten gelen efsanevi 23 tat. Keskin, tatlı, benzersiz. Orijinalin yerini hiçbir şey tutamaz.</div>
+        <div class="fl-badge">KLASİK</div>
+      </div>
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#001a2a;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#003366" stroke="#378ADD" stroke-width="1.5"/><text x="14" y="18" text-anchor="middle" fill="#85B7EB" font-size="10" font-weight="bold">0</text></svg></div>
+        <div class="fl-name">Dr Pepper Zero Sugar</div>
+        <div class="fl-desc">Aynı 23 tat, sıfır şeker. Lezzetten ödün vermeden daha hafif bir seçim.</div>
+        <div class="fl-badge">SUGAR FREE</div>
+      </div>
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#1a0a00;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#6b3300" stroke="#EF9F27" stroke-width="1.5"/><path d="M10 14c0-2.2 1.8-4 4-4s4 1.8 4 4" stroke="#FAC775" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="fl-name">Dr Pepper Cherry</div>
+        <div class="fl-desc">Klasik Dr Pepper'ın üzerine taze kiraz patlaması. Tatlı, bold, unutulmaz.</div>
+        <div class="fl-badge">YENİ TAT</div>
+      </div>
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#001a0a;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#003319" stroke="#1D9E75" stroke-width="1.5"/><path d="M9 16s1.5-4 5-4 5 4 5 4" stroke="#5DCAA5" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="fl-name">Dr Pepper & Cream Soda</div>
+        <div class="fl-desc">Kremsi ve kadifemsi bir dokunuş. Dr Pepper'ın cesareti, kremalı sodanın yumuşaklığı.</div>
+        <div class="fl-badge">ÖZEL SERI</div>
+      </div>
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#1a001a;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#33003a" stroke="#D4537E" stroke-width="1.5"/><circle cx="14" cy="14" r="5" fill="none" stroke="#ED93B1" stroke-width="1.5"/></svg></div>
+        <div class="fl-name">Dr Pepper Strawberries</div>
+        <div class="fl-desc">Taze çilek aromasıyla buluşan ikonik lezzet. Yaz günlerinin vazgeçilmezi.</div>
+        <div class="fl-badge">SEZONLUK</div>
+      </div>
+      <div class="fl-card">
+        <div class="fl-icon" style="background:#1a1400;"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="11" fill="#3a2800" stroke="#BA7517" stroke-width="1.5"/><path d="M11 11l6 6M17 11l-6 6" stroke="#EF9F27" stroke-width="1.5" stroke-linecap="round"/></svg></div>
+        <div class="fl-name">Dr Pepper Dark Berry</div>
+        <div class="fl-desc">Karanlık ve derin. Yaban mersini, böğürtlen ve Dr Pepper'ın gizli gücü bir arada.</div>
+        <div class="fl-badge">LİMİTED</div>
+      </div>
+    </div>
+  </div>
+
+  <div id="story" class="sec">
+    <div class="story-grid">
+      <div class="story-left">
+        <div class="story-year">1885</div>
+        <div class="story-h2">Bir Eczacının<br>Harikası</div>
+        <p class="story-p">Charles Alderton, 1885 yılında Waco, Texas'taki Morrison'ın Eski Köşe Eczanesi'nde bu eşsiz formülü yarattı. Müşteriler kısa sürede bu içeceğe bayıldı.</p>
+        <p class="story-p">Bugün 50'den fazla ülkede satılan Dr Pepper, dünyanın en eski büyük içecek markası olma unvanını taşıyor. 139 yıldır aynı tutku, aynı 23 tat.</p>
+        <button class="btn-red" style="margin-top:8px;">Tüm Hikayeyi Oku</button>
+      </div>
+      <div class="story-right">
+        <div class="fact-card"><div class="fact-num">1885</div><div class="fact-lbl">Waco, Texas'ta doğdu. Coca-Cola'dan bile önce.</div></div>
+        <div class="fact-card"><div class="fact-num">23</div><div class="fact-lbl">Gizli tat. Kimse tam formülü bilmiyor.</div></div>
+        <div class="fact-card"><div class="fact-num">50+</div><div class="fact-lbl">Ülkede satılıyor. Kıtalara yayıldı.</div></div>
+        <div class="fact-card"><div class="fact-num">#1</div><div class="fact-lbl">En eski büyük içecek markası.</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="shop" class="sec">
+    <div class="sec-header">
+      <div class="sec-tag">MAĞAZA</div>
+      <div class="sec-h2">Favorini Seç</div>
+      <div class="sec-sub">Hızlı teslimat, soğuk gelir garantisi</div>
+    </div>
+    <div class="products-grid">
+      <div class="prod-card">
+        <div class="prod-img" style="background:#150000;">
+          <div class="prod-mini-can" style="background:#8b0000;"><div class="prod-mini-brand">Dr</div><div class="prod-mini-brand">Pepper</div></div>
+          <div class="prod-tag">EN ÇOK SATAN</div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Original — 24'lü Koli</div>
+          <div class="prod-desc">İkonik orijinal tat. 355ml kutular. Soğuk zincir korumalı teslimat.</div>
+          <div class="prod-footer"><div class="prod-price">₺249</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img" style="background:#000f1a;">
+          <div class="prod-mini-can" style="background:#003366;"><div class="prod-mini-brand" style="color:#aad4f5;">Dr</div><div class="prod-mini-brand" style="color:#aad4f5;">Zero</div></div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Zero Sugar — 12'li</div>
+          <div class="prod-desc">Sıfır şeker, tam lezzet. Diyet yaparken bile vazgeçemezsin.</div>
+          <div class="prod-footer"><div class="prod-price">₺139</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img" style="background:#1a0800;">
+          <div class="prod-mini-can" style="background:#6b3300;"><div class="prod-mini-brand" style="color:#fac775;">Dr</div><div class="prod-mini-brand" style="color:#fac775;">Cherry</div></div>
+          <div class="prod-tag" style="background:#EF9F27;color:#412402;">YENİ</div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Cherry — 6'lı Paket</div>
+          <div class="prod-desc">Kiraz aromalı özel seri. Sınırlı stok, kaçırma!</div>
+          <div class="prod-footer"><div class="prod-price">₺89</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img" style="background:#0a0a00;">
+          <div class="prod-mini-can" style="background:#2a2000;"><div class="prod-mini-brand" style="color:#fac775;">Mix</div><div class="prod-mini-brand" style="color:#fac775;">Pack</div></div>
+          <div class="prod-tag" style="background:#7F77DD;color:#EEEDFE;">POPÜLER</div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Karışık Kutu — 24'lü</div>
+          <div class="prod-desc">4 farklı tat, 6'şar kutu. Hepsini dene, favorini bul.</div>
+          <div class="prod-footer"><div class="prod-price">₺289</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img" style="background:#000a15;">
+          <div class="prod-mini-can" style="background:#003a5c;width:60px;height:110px;border-radius:14px;border:1.5px solid #0077aa;"><div class="prod-mini-brand" style="color:#aad4f5;font-size:9px;">Dr Pepper</div><div class="prod-mini-brand" style="color:#fff;font-size:8px;">2 LİTRE</div></div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Original — 2L Şişe</div>
+          <div class="prod-desc">Büyük boy aile paketi. Arkadaş buluşmaları için ideal.</div>
+          <div class="prod-footer"><div class="prod-price">₺55</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+      <div class="prod-card">
+        <div class="prod-img" style="background:#0f000f;">
+          <div style="display:flex;gap:6px;">
+            <div class="prod-mini-can" style="background:#8b0000;width:38px;height:70px;border-radius:8px;border:1px solid #a00;"><div style="font-family:Oswald,sans-serif;font-size:8px;color:#fff;text-align:center;margin-top:8px;">Dr P</div></div>
+            <div class="prod-mini-can" style="background:#003366;width:38px;height:70px;border-radius:8px;border:1px solid #06a;"><div style="font-family:Oswald,sans-serif;font-size:8px;color:#aaf;text-align:center;margin-top:8px;">Zero</div></div>
+            <div class="prod-mini-can" style="background:#6b3300;width:38px;height:70px;border-radius:8px;border:1px solid #a65;"><div style="font-family:Oswald,sans-serif;font-size:8px;color:#fac775;text-align:center;margin-top:8px;">Chry</div></div>
+          </div>
+          <div class="prod-tag" style="background:#c0392b;">HEDİYE</div>
+        </div>
+        <div class="prod-info">
+          <div class="prod-name">Dr Pepper Hediye Seti</div>
+          <div class="prod-desc">Özel kutu, 3 tat, 9'ar kutu. Sevdiklerine en ikonik hediye.</div>
+          <div class="prod-footer"><div class="prod-price">₺349</div><button class="prod-add">Sepete Ekle</button></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Dr Pepper</div>
+        <div class="footer-bio">1885'ten beri dünyanın en ikonik içeceği. 23 tat, sonsuz an. Her yudumda tarih, her kutuda tutku.</div>
+      </div>
+      <div class="footer-col">
+        <h4>ÜRÜNLER</h4>
+        <a>Original</a><a>Zero Sugar</a><a>Cherry</a><a>Cream Soda</a><a>Dark Berry</a>
+      </div>
+      <div class="footer-col">
+        <h4>ŞİRKET</h4>
+        <a>Hakkımızda</a><a>Tarihimiz</a><a>Kariyer</a><a>Basın</a><a>İletişim</a>
+      </div>
+      <div class="footer-col">
+        <h4>DESTEK</h4>
+        <a>SSS</a><a>Teslimat</a><a>İade Politikası</a><a>Gizlilik</a><a>Kullanım Şartları</a>
+      </div>
+    </div>
+    <div class="footer-bot">
+      <div class="footer-copy">© 2025 Dr Pepper. Tüm hakları saklıdır.</div>
+      <div class="footer-socials">
+        <div class="fsoc"><svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 01-3.14 1.53A4.48 4.48 0 0012 8v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"/></svg></div>
+        <div class="fsoc"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></div>
+        <div class="fsoc"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function show(id, btn){
+  document.querySelectorAll('.sec').forEach(s=>s.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  document.querySelectorAll('.nl').forEach(b=>b.classList.remove('on'));
+  if(btn)btn.classList.add('on');
+}
+
+document.querySelectorAll('.prod-add').forEach(btn=>{
+  btn.addEventListener('click',function(){
+    const orig=this.textContent;
+    this.textContent='Eklendi!';
+    this.style.background='#1D9E75';
+    setTimeout(()=>{this.textContent=orig;this.style.background='#c0392b';},1500);
+  });
+});
+
+const bc=document.getElementById('bubble-canvas');
+const bctx=bc.getContext('2d');
+let bubbles=[];
+function resizeBC(){bc.width=bc.offsetWidth;bc.height=bc.offsetHeight||520;}
+resizeBC();
+for(let i=0;i<40;i++) bubbles.push({x:Math.random()*bc.width,y:bc.height+Math.random()*bc.height,r:Math.random()*4+1,spd:Math.random()*0.6+0.2,a:Math.random()*0.25+0.05,wobble:Math.random()*Math.PI*2,wSpd:Math.random()*0.02+0.01});
+function animBubbles(){
+  bctx.clearRect(0,0,bc.width,bc.height);
+  bubbles.forEach(b=>{
+    b.y-=b.spd;
+    b.wobble+=b.wSpd;
+    const wx=Math.sin(b.wobble)*2;
+    if(b.y+b.r<0){b.y=bc.height+b.r;b.x=Math.random()*bc.width;}
+    bctx.strokeStyle=`rgba(192,57,43,${b.a})`;
+    bctx.lineWidth=0.5;
+    bctx.beginPath();
+    bctx.arc(b.x+wx,b.y,b.r,0,Math.PI*2);
+    bctx.stroke();
+  });
+  requestAnimationFrame(animBubbles);
+}
+animBubbles();
+window.addEventListener('resize',resizeBC);
+</script>
